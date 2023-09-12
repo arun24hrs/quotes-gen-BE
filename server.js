@@ -5,7 +5,7 @@ const { Configuration, OpenAIApi } = require('openai');
 require('dotenv').config();
 
 const app = express();
-app.use(cors());
+app.use(cors({origin: 'https://quotes-generator-tau.vercel.app'}));
 app.use(express.json());
 
 const configuration = new Configuration({
